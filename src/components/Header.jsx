@@ -16,6 +16,11 @@ export default function Header() {
     return totalNumberOfItems + item.quantity;
   }, 0);
 
+    // const handlesignout =()=>{
+    //   localStorage.removeItem('isUserSignedUp');
+    //   localStorage.removeItem('full_name');
+    //   localStorage.removeItem('isLoggedIn');
+    // }
   
 
   return (
@@ -24,9 +29,14 @@ export default function Header() {
         <img src={logoImg} alt="A restaurant" />
         <h1>ReactFood</h1>
       </div>
-      <nav>
+      <nav >
         <Button onClick={handleShowCart}>Cart ({totalCartItems})</Button>
-      </nav>
+        </nav>
+        {/* <nav>        
+          <Button onclick={handlesignout}>signout</Button>
+        </nav> */}
+
+     
     </header>
   );
 }

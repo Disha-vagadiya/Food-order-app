@@ -1,0 +1,87 @@
+.container {
+    text-align: center;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .title {
+    
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #E5413C;
+  }
+  
+  .form {
+    align-items: center;
+    width: 80%; /* Adjust width for better responsiveness */
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .loginButton {
+    align-items: center;
+    margin-top: 20px; /* Increase margin for better spacing */
+    background-color: blue;
+    color: white;
+    padding: 10px 20px; /* Adjust padding for better button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; /* Button takes full width */
+  }
+  
+  .errorText {
+    align-items: center;
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .label {
+    
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px; /* Increase margin for better spacing */
+  }
+  
+  .input {
+    margin: 10px;
+    align-items: center;
+    width: 50%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+  
+  .a {
+    margin-top: 10px; /* Adjust margin for better alignment */
+    display: block; /* Display as block for full width */
+    text-decoration: none;
+    color: red;
+    align-items: center;
+    
+  }
+  
+  .googlebtn {
+    margin-top: 20px; /* Adjust margin for better spacing */
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  .googlebtn .GoogleButton {
+    border-radius: 20px;
+    padding: 10px 20px; 
+  }
+  .inputstyle{
+    padding: 20px;
+  }
+  
