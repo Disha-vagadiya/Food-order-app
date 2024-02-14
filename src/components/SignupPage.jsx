@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import './signpage.css'
 import userlogo from '../assets/userlogo.jpg';
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
+
+
 
 function SignupPage({ onSignupSuccess }) {
   const [userEmail, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate(); 
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -41,6 +46,8 @@ function SignupPage({ onSignupSuccess }) {
         const { full_name } = response.data.data;
         localStorage.setItem('full_name', full_name);
         localStorage.setItem('isLoggedIn', 'true');
+        navigate('/meals'); 
+        
 
         onSignupSuccess(full_name); 
       } else {

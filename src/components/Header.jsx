@@ -3,11 +3,12 @@ import logoImg from '../assets/logo.jpg';
 import Button from './UI/Button.jsx';
 import CartContext from '../store/CartContext.jsx';
 import UserProgressContext from '../store/UserProgressContext.jsx';
-
+import { useNavigate } from 'react-router-dom'; 
+import SignupPage from './SignupPage.jsx';
 export default function Header() {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
-
+  const navigate = useNavigate(); 
   function handleShowCart() {
     userProgressCtx.showCart();
   }
@@ -16,12 +17,13 @@ export default function Header() {
     return totalNumberOfItems + item.quantity;
   }, 0);
 
-    // const handlesignout =()=>{
-    //   localStorage.removeItem('isUserSignedUp');
-    //   localStorage.removeItem('full_name');
-    //   localStorage.removeItem('isLoggedIn');
-    // }
-  
+  const handleSignOut = () => {
+    localStorage.removeItem('isUserSignedUp');
+    localStorage.removeItem('full_name');
+    localStorage.removeItem('isLoggedIn');
+    navigate('/'); 
+    console.log(handleSignOut)
+  };
 
   return (
     <header id="main-header">
@@ -31,11 +33,8 @@ export default function Header() {
       </div>
       <nav >
         <Button onClick={handleShowCart}>Cart ({totalCartItems})</Button>
-        </nav>
-        {/* <nav>        
-          <Button onclick={handlesignout}>signout</Button>
-        </nav> */}
-
+        <Button style={{ margin:20, color:'red',background:'white' }}onClick={handleSignOut}>SignOut</Button>
+      </nav>
      
     </header>
   );
