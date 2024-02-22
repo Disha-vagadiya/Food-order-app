@@ -36,6 +36,10 @@ export default function Checkout() {
    
     if (couponCode === '20OFF') {
       totalDiscountPercentage += 0.2;
+    }else if(couponCode === '30OFF'){
+      totalDiscountPercentage += 0.3;
+    }else if( couponCode === '440OFF'){
+      totalDiscountPercentage  += 0.5;
     }
 
   
@@ -113,12 +117,12 @@ export default function Checkout() {
           </p>
         </div>
 
-        <Input label="Full Name" type="text" id="name" />
-        <Input label="E-Mail Address" type="email" id="email" />
-        <Input label="Street" type="text" id="street" />
+        <Input label="Full Name" type="text" id="name"  required/>
+        <Input label="E-Mail Address" type="email" id="email"  required />
+        <Input label="Street" type="text" id="street"  required />
         <div className="control-row">
-          <Input label="Postal Code" type="text" id="postal-code" />
-          <Input label="City" type="text" id="city" />
+          <Input label="Postal Code" type="text" id="postal-code"  required/>
+          <Input label="City" type="text" id="city"   required />
         </div>
 
         {error && <Error title="Failed to submit order" message={error} />}
